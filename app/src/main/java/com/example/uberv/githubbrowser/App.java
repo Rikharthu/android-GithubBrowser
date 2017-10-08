@@ -9,6 +9,8 @@ public class App extends Application {
     public void onCreate() {
         super.onCreate();
 
-        Timber.plant(new DevelopmentTree());
+        if(BuildConfig.DEBUG){
+            Timber.plant(new DevelopmentTree());
+        }
     }
 }
